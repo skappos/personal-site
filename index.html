@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<title>Sophia Kappos's Personal Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0}
+    .mySlides {display: none}
+    img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @-webkit-keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+
+    footer {
+        background-color: #FFF;
+        color: white;
+        padding: 15px;
+    }
+
+    .fa{
+        color: black;
+        font-size: 50px;
+    }
+
+    a img {
+        height: 50px;
+        width: 50px;
+    }
+
+    * {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+    
+</style>
+
+<body>
+
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>SK</b> Sophia Kappos</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+        <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+      <a href="#social" class="w3-bar-item w3-button">Social Media</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="/images/uncsoph.jpg" alt="Sophia Kappos" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>SK</b></span> <span class="w3-hide-small w3-text-light-grey">Sophia Kappos</span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+      <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p>Junior at the University of North Carolina at Chapel Hill. Studying Computer Science
+        with a minor in Neuroscience and Cognitive Science. Interested in Web Development, Artificial Intelligence, and Graphic Design. Hoping to combine my love for art with my passion for technology.
+    </p>
+  </div>
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Art Work</h3>
+  </div>
+
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 11</div>
+      <img src="/images/pic1.JPG" style="width:100%">
+      <div class="text"> Canvas Paintings</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 11</div>
+        <img src="/images/starrynight.JPG" style="width:100%">
+        <div class="text">Starry Night Mural on Wall</div>
+      </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 11</div>
+      <img src="/images/ladies.JPG" style="width:100%">
+      <div class="text">Canvas Paintings </div>
+    </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 11</div>
+        <img src="/images/butterfly1.JPG" style="width:100%">
+        <div class="text">Canvas Paintings</div>
+      </div>
+
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 11</div>
+        <img src="/images/album.JPG" style="width:100%">
+        <div class="text">Canvas Paintings</div>
+      </div>
+    
+
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 11</div>
+        <img src="/images/coloringwall.JPG" style="width:100%">
+        <div class="text">Giant Coloring Wall</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">7 / 11</div>
+        <img src="/images/allcolors.JPG" style="width:100%">
+        <div class="text">Collages Made From Magazine Scraps</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">8 / 11</div>
+        <img src="/images/cup.JPG" style="width:100%">
+        <div class="text">Painted Mason Jar</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">9 / 11</div>
+        <img src="/images/shoes.JPG" style="width:100%">
+        <div class="text">Beaded High Tops</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">10 / 11</div>
+        <img src="/images/pong.JPG" style="width:100%">
+        <div class="text">Painted Pong Table</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">11 / 11</div>
+        <img src="/images/rando.JPG" style="width:100%">
+        <div class="text">Decorative 'S' & Embroidery</div>
+      </div>
+
+
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+      <span class="dot" onclick="currentSlide(5)"></span> 
+      <span class="dot" onclick="currentSlide(6)"></span> 
+      <span class="dot" onclick="currentSlide(7)"></span> 
+      <span class="dot" onclick="currentSlide(8)"></span> 
+      <span class="dot" onclick="currentSlide(9)"></span> 
+      <span class="dot" onclick="currentSlide(10)"></span> 
+      <span class="dot" onclick="currentSlide(11)"></span> 
+    </div>
+
+<!--Photography -->
+<div class="w3-container w3-padding-32" id="projects">
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Photography</h3>
+</div>
+
+  <iframe width="800" height="500" src="https://www.youtube.com/embed/JAgKlSKYkSk?controls=0" frameborder="0" allow="accelerometer; autoplay; mute; clipboard-write; encrypted-media; gyroscope; " allowfullscreen></iframe>
+
+<!--App -->
+<div class="w3-container w3-padding-32" id="projects">
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Web Applications</h3>
+</div>
+<h3 class="w3-text-grey w3-center" > Exam Scheduler</h3>
+<p> There is a huge disconnect between college students and professors when it comes to understanding each other's schedules. 
+   This leads to increasing levels of stress between both parties and decreasing levels of performance inside the classroom. 
+  This web app allows a professor to see when all of the students in his/her classes have exams so he/she can schedule exams with empathy.
+</p>
+<p><a href="https://examscheduler2.netlify.app/index.html"><p></p> Visit Exam Scheduler</a> & Watch the Walkthrough Below! </p>
+
+
+<iframe width="800" height="500" src="https://www.youtube.com/embed/uWxXskvVYI8?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<h3 class="w3-text-grey w3-center w3-margin-top w3-padding-16" > 2048 Game</h3>
+<p> Recreated the popular 2048 game from scratch using only HTML, CSS, and JavaScript.
+</p>
+<p><a href="https://sk2048.netlify.app"><p></p> Visit 2048 Game</a> </p>
+
+
+
+<!-- End page content -->
+</div>  
+<div class="w3-container w3-padding-32" id="social"></div>
+<div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"></h3>
+    
+  </div>
+
+
+<!-- Footer -->
+<div class="w3-container">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+       
+        <div class="w3-bar-item w3-button"> Social Media</div>
+      <!-- Float links to the right. Hide them on small screens -->
+      <div class="w3-right ">
+        <a href="https://twitter.com/KapposSophie?ref_src=twsrc%5Etfw" class="w3-bar-item w3-button">Twitter</a>
+        <a href="https://www.instagram.com/sophie_kappos/" class="w3-bar-item w3-button">Instagram</a>
+        <a href="https://www.instagram.com/gen.zeats/" class="w3-bar-item w3-button">Foodstagram</a>
+
+   
+    
+      </div>
+    </div>
+  </div>
+
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+
+
+
+</body>
+</html>
+
